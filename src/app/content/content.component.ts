@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
+    allowNewContent = false;
 
-  constructor() { }
+    constructor() {
+        setTimeout(() => {
+            this.allowNewContent = true;
+        }, 5000);
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }
