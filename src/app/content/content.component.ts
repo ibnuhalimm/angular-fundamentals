@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContentComponent implements OnInit {
     allowNewContent = false;
     createContentStatus = 'No content created';
+    userName: string = '';
 
     constructor() {
         setTimeout(() => {
@@ -22,4 +23,7 @@ export class ContentComponent implements OnInit {
         this.createContentStatus = 'Content was created!';
     }
 
+    onUpdateUserName(event: Event) {
+        this.userName = (<HTMLInputElement>event.target).value;
+    }
 }

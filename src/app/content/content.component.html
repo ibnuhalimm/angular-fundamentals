@@ -12,3 +12,19 @@
         </p>
     </div>
 </div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="name">
+                Name:
+            </label>
+            <input type="text" name="name" id="name" class="form-control" (input)="onUpdateUserName($event)">
+        </div>
+        <div class="form-group">
+            <p>
+                {{ userName }}
+            </p>
+        </div>
+    </div>
+</div>
