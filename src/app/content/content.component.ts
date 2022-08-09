@@ -7,14 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
     allowNewContent = false;
+    createContentStatus = 'No content created';
 
     constructor() {
         setTimeout(() => {
             this.allowNewContent = true;
-        }, 5000);
+        }, 3000);
     }
 
     ngOnInit(): void {
+    }
+
+    onCreateContent() {
+        this.createContentStatus = 'Content was created!';
     }
 
 }
