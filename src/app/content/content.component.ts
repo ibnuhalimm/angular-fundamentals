@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
     allowShowName = false;
-    completeText = 'Enter your name.';
-    userName: string = '';
+    userName = '';
+    showUserName = false;
 
     constructor() {
         setTimeout(() => {
@@ -20,6 +20,6 @@ export class ContentComponent implements OnInit {
     }
 
     onShowName() {
-        this.completeText = `Your name is ${this.userName}`;
+        this.showUserName = true;
     }
 }
