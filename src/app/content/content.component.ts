@@ -6,25 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
-    allowNewContent = false;
-    createContentStatus = 'No content created';
+    allowShowName = false;
+    completeText = 'Enter your name.';
     userName: string = '';
-    nickname: string = '';
 
     constructor() {
         setTimeout(() => {
-            this.allowNewContent = true;
+            this.allowShowName = true;
         }, 3000);
     }
 
     ngOnInit(): void {
     }
 
-    onCreateContent() {
-        this.createContentStatus = 'Content was created!';
-    }
-
-    onUpdateUserName(event: Event) {
-        this.userName = (<HTMLInputElement>event.target).value;
+    onShowName() {
+        this.completeText = `Your name is ${this.userName}`;
     }
 }
