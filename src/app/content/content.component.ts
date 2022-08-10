@@ -9,6 +9,7 @@ export class ContentComponent implements OnInit {
     allowNewContent = false;
     createContentStatus = 'No content created';
     userName: string = '';
+    nickname: string = '';
 
     constructor() {
         setTimeout(() => {

@@ -26,5 +26,16 @@
                 {{ userName }}
             </p>
         </div>
+        <div class="form-group">
+            <label for="nick_name">
+                Nick Name (Two Way Data Binding):
+            </label>
+            <input type="text" id="nick_name" class="form-control" [(ngModel)]="nickname">
+        </div>
+        <div class="form-group">
+            <p>
+                {{ nickname }}
+            </p>
+        </div>
     </div>
 </div>
